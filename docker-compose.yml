@@ -25,3 +25,5 @@ services:
       MYSQL_DATABASE: api
       MYSQL_USER: admin
       MYSQL_PASSWORD: password
+    ports:
+      - "33061:3306"
