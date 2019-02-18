@@ -10,7 +10,7 @@ namespace App\API\DataPersister;
 
 
 use ApiPlatform\Core\DataPersister\DataPersisterInterface;
-use App\API\CreateBook as BookAPI;
+use App\API\BookCommand;
 use App\Entity\Book;
 
 class CreateBookDataPersister implements DataPersisterInterface
@@ -22,11 +22,11 @@ class CreateBookDataPersister implements DataPersisterInterface
 
     public function supports($data): bool
     {
-        return $data instanceof BookAPI;
+        return $data instanceof BookCommand;
     }
 
     /**
-     * @param BookAPI $data
+     * @param BookCommand $data
      * @return object
      */
     public function persist($data)
